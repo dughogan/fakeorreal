@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real or AI?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                blue: '#245397', // Pantone 287C
+                navy: '#1c4177', // Updated to brighter navy per request
+                gold: '#f0c33b', // Pantone 123
+                cyan: '#1dbbe5', // Pantone 305
+                red: '#9a281e',  // Pantone 484
+                darkGold: '#cf982a', // Pantone 1245C
+                beige: '#c4a97c', // Pantone 465
+                neonGreen: '#39ff14',
+                neonRed: '#ff073a',
+              },
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                digital: ['Orbitron', 'sans-serif'],
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              digital: ['Orbitron', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow: hidden; /* Prevent pull-to-refresh on mobile */
+      }
+      /* Custom scrollbar for the review screen */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1c4177; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #245397; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #1dbbe5; 
+      }
+      
+      /* Sci-Fi Grid Background */
+      .bg-grid {
+        background-size: 40px 40px;
+        background-image: 
+          linear-gradient(to right, rgba(29, 187, 229, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(29, 187, 229, 0.05) 1px, transparent 1px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "jszip": "https://aistudiocdn.com/jszip@^3.10.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-navy text-white h-screen w-screen overflow-hidden">
+    <div id="root" class="h-full w-full"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
